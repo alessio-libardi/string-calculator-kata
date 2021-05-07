@@ -34,6 +34,11 @@ describe('String calculator function', function () {
   })
 
   describe('Step 3: handle new lines between numbers', function () {
-    it.todo('accept new lines between numbers')
+    it('accept new lines between numbers', function () {
+      const actual = add('1\n2,3')
+      const expected = 6
+
+      expect(actual).toBe(expected)
+    })
   })
 })

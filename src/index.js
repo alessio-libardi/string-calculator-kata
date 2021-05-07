@@ -4,7 +4,7 @@ function add(numbers) {
     return numbers
   }
 
-  const integers = numbers.split(',').map((n) => parseInt(n))
+  const integers = numbers.split(/[(\r\n|\r|\n),]+/).map((n) => parseInt(n))
 
   return integers.reduce((acc, curr) => acc + curr, 0)
 }
