@@ -16,6 +16,11 @@ describe('String calculator function', function () {
       expect(actual).toBe(expected)
     })
 
-    it.todo('accept a string with two numbers')
+    it('accept a string with two numbers', function () {
+      const actual = add('1,2')
+      const expected = 3
+
+      expect(actual).toBe(expected)
+    })
   })
 })

@@ -3,7 +3,10 @@ function add(numbers) {
     return numbers
   }
 
-  return parseInt(numbers)
+  return numbers
+    .split(',')
+    .map((n) => parseInt(n))
+    .reduce((acc, curr) => acc + curr, 0)
 }
 
 module.exports = add
