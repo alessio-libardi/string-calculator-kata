@@ -70,4 +70,8 @@ describe('String calculator function', function () {
       expect(actual).toThrow(expected)
     })
   })
+
+  describe('Step 6: ignore big numbers', function () {
+    it.todo('ignore numbers bigger than 1000')
+  })
 })
