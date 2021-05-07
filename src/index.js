@@ -1,5 +1,9 @@
 const DEFAULT_DELIMITER = ','
-const NEW_LINES_DELIMITER = /[\n]+/
+const NEW_LINE_DELIMITER = /[\n]+/
+
+const CUSTOM_DELIMITER_LINE = /^\/\/(?<delimiter>.+)$/m
+const FIRST_LINE = /^(.*)$/m
+const FIRST_NEW_LINE = /^(\n)$/m
 
 function add(numbers) {
   const isEmpty = numbers === ''
@@ -7,10 +11,19 @@ function add(numbers) {
     return numbers
   }
 
-  numbers = numbers.replace(NEW_LINES_DELIMITER, DEFAULT_DELIMITER)
+  let customDelimiter = null
 
-  const matches = numbers.split(DEFAULT_DELIMITER)
-  const integers = matches.map((n) => parseInt(n))
+  const hasCustomDelimiter = CUSTOM_DELIMITER_LINE.test(numbers)
+  if (hasCustomDelimiter) {
+    const match = CUSTOM_DELIMITER_LINE.exec(numbers)
+    customDelimiter = match.groups.delimiter
+    numbers = numbers.replace(FIRST_LINE, '').substr(1)
+  }
+
+  const delimiter = customDelimiter || DEFAULT_DELIMITER
+  numbers = numbers.replace(NEW_LINE_DELIMITER, delimiter)
+
+  const integers = numbers.split(delimiter).map((n) => parseInt(n))
   return integers.reduce((acc, curr) => acc + curr, 0)
 }
 

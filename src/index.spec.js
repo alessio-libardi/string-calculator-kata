@@ -41,4 +41,13 @@ describe('String calculator function', function () {
       expect(actual).toBe(expected)
     })
   })
+
+  describe('Step 4: support different delimiters', function () {
+    it('accept a custom delimiter', function () {
+      const actual = add('//;\n1;2')
+      const expected = 3
+
+      expect(actual).toBe(expected)
+    })
+  })
 })
