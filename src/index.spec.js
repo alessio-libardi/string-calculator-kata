@@ -9,7 +9,12 @@ describe('String calculator function', function () {
       expect(actual).toBe(expected)
     })
 
-    it.todo('accept a string with one number')
+    it('accept a string with one number', function () {
+      const actual = add('1')
+      const expected = 1
+
+      expect(actual).toBe(expected)
+    })
 
     it.todo('accept a string with two numbers')
   })
