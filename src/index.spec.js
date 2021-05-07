@@ -32,4 +32,8 @@ describe('String calculator function', function () {
       expect(actual).toBe(expected)
     })
   })
+
+  describe('Step 3: handle new lines between numbers', function () {
+    it.todo('accept new lines between numbers')
+  })
 })
