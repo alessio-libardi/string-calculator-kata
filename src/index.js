@@ -3,7 +3,6 @@ const NEW_LINE_DELIMITER = /[\n]+/
 
 const CUSTOM_DELIMITER_LINE = /^\/\/(?<delimiter>.+)$/m
 const FIRST_LINE = /^(.*)$/m
-const FIRST_NEW_LINE = /^(\n)$/m
 
 function add(numbers) {
   const isEmpty = numbers === ''
