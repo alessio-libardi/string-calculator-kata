@@ -25,6 +25,11 @@ describe('String calculator function', function () {
   })
 
   describe('Step 2: handle an unknown amount of numbers', function () {
-    it.todo('accept an unknown amount of numbers')
+    it('accept an unknown amount of numbers', function () {
+      const actual = add('1,2,3,4,5')
+      const expected = 15
+
+      expect(actual).toBe(expected)
+    })
   })
 })
