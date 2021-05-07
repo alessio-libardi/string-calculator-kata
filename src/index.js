@@ -1,12 +1,12 @@
 function add(numbers) {
-  if (numbers === '') {
+  const isEmpty = numbers === ''
+  if (isEmpty) {
     return numbers
   }
 
-  return numbers
-    .split(',')
-    .map((n) => parseInt(n))
-    .reduce((acc, curr) => acc + curr, 0)
+  const integers = numbers.split(',').map((n) => parseInt(n))
+
+  return integers.reduce((acc, curr) => acc + curr, 0)
 }
 
 module.exports = add
