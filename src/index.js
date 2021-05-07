@@ -1,1 +1,5 @@
-export function add(numbers) {}
+function add(numbers) {
+  return numbers
+}
+
+module.exports = add
