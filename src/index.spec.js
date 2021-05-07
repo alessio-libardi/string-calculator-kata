@@ -61,6 +61,13 @@ describe('String calculator function', function () {
       expect(actual).toThrow(expected)
     })
 
-    it.todo('throw error with multiple negative numbers')
+    it('throw error with multiple negative numbers', function () {
+      const actual = function () {
+        add('1,4,-1,-2,-3')
+      }
+      const expected = 'negatives not allowed: -1,-2,-3'
+
+      expect(actual).toThrow(expected)
+    })
   })
 })

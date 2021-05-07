@@ -23,9 +23,9 @@ function add(numbers) {
   numbers = numbers.replace(NEW_LINE_DELIMITER, delimiter)
 
   const integers = numbers.split(delimiter).map((n) => parseInt(n))
-  const negativeNumber = integers.find((n) => n < 0)
-  if (negativeNumber) {
-    throw new Error(`negatives not allowed: ${negativeNumber}`)
+  const negativeNumbers = integers.filter((n) => n < 0)
+  if (negativeNumbers.length > 0) {
+    throw new Error(`negatives not allowed: ${negativeNumbers.join(',')}`)
   }
 
   return integers.reduce((acc, curr) => acc + curr, 0)
