@@ -23,4 +23,8 @@ describe('String calculator function', function () {
       expect(actual).toBe(expected)
     })
   })
+
+  describe('Step 2: handle an unknown amount of numbers', function () {
+    it.todo('accept an unknown amount of numbers')
+  })
 })
