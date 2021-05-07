@@ -52,7 +52,14 @@ describe('String calculator function', function () {
   })
 
   describe('Step 5: negative numbers', function () {
-    it.todo('throw error with single negative numbers')
+    it('throw error with single negative numbers', function () {
+      const actual = function () {
+        add('1,4,-1')
+      }
+      const expected = 'negatives not allowed: -1'
+
+      expect(actual).toThrow(expected)
+    })
 
     it.todo('throw error with multiple negative numbers')
   })
