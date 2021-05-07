@@ -72,6 +72,11 @@ describe('String calculator function', function () {
   })
 
   describe('Step 6: ignore big numbers', function () {
-    it.todo('ignore numbers bigger than 1000')
+    it('ignore numbers bigger than 1000', function () {
+      const actual = add('1,4, 10200')
+      const expected = 5
+
+      expect(actual).toBe(expected)
+    })
   })
 })

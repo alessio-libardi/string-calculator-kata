@@ -22,7 +22,10 @@ function add(numbers) {
   const delimiter = customDelimiter || DEFAULT_DELIMITER
   numbers = numbers.replace(NEW_LINE_DELIMITER, delimiter)
 
-  const integers = numbers.split(delimiter).map((n) => parseInt(n))
+  const integers = numbers
+    .split(delimiter)
+    .map((n) => parseInt(n))
+    .filter((n) => n <= 1000)
   const negativeNumbers = integers.filter((n) => n < 0)
   if (negativeNumbers.length > 0) {
     throw new Error(`negatives not allowed: ${negativeNumbers.join(',')}`)
