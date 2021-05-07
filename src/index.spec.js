@@ -50,4 +50,10 @@ describe('String calculator function', function () {
       expect(actual).toBe(expected)
     })
   })
+
+  describe('Step 5: negative numbers', function () {
+    it.todo('throw error with single negative numbers')
+
+    it.todo('throw error with multiple negative numbers')
+  })
 })
