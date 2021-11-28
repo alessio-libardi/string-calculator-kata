@@ -1,13 +1,23 @@
 {
   "env": {
-    "node": true,
     "es2021": true,
-    "jest": true
+    "node": true,
+    "jest/globals": true
   },
-  "extends": ["standard"],
+  "extends": ["standard", "plugin:functional/recommended", "prettier"],
+  "overrides": [
+    {
+      "extends": ["plugin:jest/recommended"],
+      "files": ["./src/**/*.spec.js"],
+      "settings": {
+        "disable/plugins": ["functional"]
+      }
+    }
+  ],
   "parserOptions": {
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "rules": {}
+  "plugins": ["disable", "functional"],
+  "processor": "disable/disable"
 }

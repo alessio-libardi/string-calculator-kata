@@ -1,6 +1,6 @@
-# String Calculator Kata
+# String number calculator
 
-This is a working solution of the [string-calculator-kata](https://github.com/wonderflow-bv/string-calculator-kata) by [wonderflow](https://www.wonderflow.ai/).
+This is a working solution of the [string-calculator-kata](https://github.com/wonderflow-bv/string-calculator-kata) by [Wonderflow](https://wonderflow.ai/).
 
 The language adopted is Node and the test library is Jest.
 
@@ -8,17 +8,20 @@ The language adopted is Node and the test library is Jest.
 
 Prerequisites:
 
-- `node 14.15.0`
-- `npm 6.14.8`
+- `node v16.12.0`
+- `npm v8.1.0`
 
-Install dependencies:
+Install dependencies and run test suite:
 
 - `npm i`
-
-Run test suite:
-
 - `npm test`
 
-## Kata instructions
+## Kata
 
-See [ASSIGNMENT.md](./ASSIGNMENT.md)
+See [ASSIGNMENT.md](https://github.com/wonderflow-bv/string-calculator-kata/blob/master/README.md)
+
+
+### Solutions
+
+- [v2](https://github.com/alessio-libardi/string-calculator-kata/tree/v2)
+- [v1](https://github.com/alessio-libardi/string-calculator-kata/tree/v1)
