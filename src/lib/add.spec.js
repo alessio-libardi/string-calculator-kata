@@ -8,4 +8,8 @@ describe('add function', () => {
   it('should accept an empty string and return a default value', () => {
     expect(add('')).toBe(0)
   })
+
+  it('should accept a single number and return it', () => {
+    expect(add('1')).toBe(1)
+  })
 })

@@ -1,5 +1,5 @@
-function add(numbers) {
-  return 0
+function add(number) {
+  return number ? parseInt(number) : 0
 }
 
 export { add }
